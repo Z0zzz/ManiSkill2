@@ -307,7 +307,7 @@ class PlugChargerEnv(StationaryManipulationEnv):
         super().set_state(state)
         self.goal_pose = self.receptacle.pose.transform(Pose(q=euler2quat(0, 0, np.pi)))
 
-@register_env("PlugCharger-v1", max_episode_steps=200, obj_init_rot=0.2)
+@register_env("PlugCharger-v1", max_episode_steps=200)
 class PlugChargerEnv_v1(PlugChargerEnv):
     pass
 
