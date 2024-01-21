@@ -400,3 +400,8 @@ class TurnFaucetEnv(TurnFaucetBaseEnv):
         self.target_angle = state[-1]
         super().set_state(state[:-1])
         self.last_angle_diff = self.target_angle - self.current_angle
+
+
+@register_env("TurnFaucet-v1", max_episode_steps=200)
+class TurnFaucetEnv_v1(TurnFaucetEnv):
+    pass
