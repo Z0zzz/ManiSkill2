@@ -259,3 +259,7 @@ class PandaAvoidObstaclesEnv(AvoidObstaclesBaseEnv):
             self.agent.robot.get_links(), self.agent.config.ee_link_name
         )
         set_articulation_render_material(self.agent.robot, specular=0.9, roughness=0.3)
+
+@register_env("PandaAvoidObstacles-v1", max_episode_steps=500)
+class PandaAvoidObstaclesEnv_v1(PandaAvoidObstaclesEnv):
+    pass
